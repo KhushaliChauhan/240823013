@@ -10,8 +10,8 @@ const app=express()
 
 app.get('/',(req,res)=>
 {
-    res.send("Hello World!!");
+    res.send("Shurbhi jha!");
 });
-app.listen(80,()=>{
-    console.log('server is running at ');
+app.listen(3000,()=>{
+    console.log('server is running at 3000');
 });

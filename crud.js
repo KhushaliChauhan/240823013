@@ -18,6 +18,8 @@ const songSchema = new mongoose.Schema({
 const Song = mongoose.model("Song", songSchema);
 console.log("Song model created successfully");
 
+// Select all records
+
 Song.find()
   .then((allSongs) => {
     console.log("All songs retrieved successfully:", allSongs);
@@ -26,6 +28,8 @@ Song.find()
     console.error("Error retrieving songs:", error);
   });
 
+// Select specific records
+
 // Song.find({ category: "Bollywood" })
 //   .then((allSongs) => {
 //     console.log("All songs retrieved successfully:", allSongs);
@@ -33,6 +37,8 @@ Song.find()
 //   .catch((error) => {
 //     console.error("Error retrieving songs:", error);
 //   });
+
+// Insert into songs model
 
 // const newSong = new Song({
 //   title: "Vandematram",

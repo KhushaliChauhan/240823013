@@ -9,8 +9,9 @@ const {
 
 Router.get("/index", studentController.index);
 Router.get("/show/:id", studentController.show);
+Router.post("/welcome", studentController.welcome);
 Router.post("/store", (req, res, next) => {
-  const result = validate(createValidator, req.body);
+  const result = validate(updateValidator, req.body);
 
   if (!result.success) {
     return res.status(400).json({ status: "error", errors: result.errors });

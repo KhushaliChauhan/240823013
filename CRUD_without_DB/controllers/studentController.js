@@ -12,6 +12,7 @@ exports.show = (req, res) => {
 
 exports.welcome = (req, res) => {
   res.send(`Hello welcome${req.params.name}`);
+   res.send("Hello welcome to live website");
 };
 
 

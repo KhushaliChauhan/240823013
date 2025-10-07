@@ -6,7 +6,8 @@ exports.index = (req, res) => {
 };
 
 exports.show = (req, res) => {
-  res.send(`Showing data for ID: ${req.params.id}\n`);
+  // res.send(`Showing data for ID: ${req.params.id}\n`);
+  res.send("Hello welcome to live website");
 };
 
 exports.welcome = (req, res) => {

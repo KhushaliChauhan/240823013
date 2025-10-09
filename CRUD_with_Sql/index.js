@@ -1,13 +1,13 @@
-const express=require("express");
-const sequalize=require("sequelize");
+const express = require('express');
+const Sequelize = require('sequelize');
 
-const studentroute=require("/Routes/studentRoute");
-const app=express();
-const PORT=81;
+const studentRoute = require('./Routes/studentRoute');
+const app = express();
+const PORT = 3000;
+
 app.use(express.json());
+app.use('/products', studentRoute);
 
-app.listen("/student",studentroute);
-
-app.listen(PORT,()=>{
-    console.log("Server is running:127.0.0.1:"+PORT);
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
